@@ -1,7 +1,5 @@
 
 const studentRouter = (method,res) => {
-
-    const {method,url} = req;
     switch(method) {
         case "POST" :
               

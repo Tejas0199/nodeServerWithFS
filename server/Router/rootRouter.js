@@ -1,3 +1,4 @@
+const courseRouter = require('./course.router');
 const studentRouter = require('./student.router');
 
 const rootRouter = (req,res) => {
@@ -7,7 +8,8 @@ const rootRouter = (req,res) => {
             studentRouter(method,res);
             return;
         case "/course" :
-
+            courseRouter(method,res);
+            return;
         case "/triners" :
         case "/trackers" :
         case "/course/mern" :
