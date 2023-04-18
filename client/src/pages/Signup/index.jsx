@@ -40,10 +40,23 @@ class Signup extends Component {
                 <InputField 
                 label="Enter First Name"
                 name="firstname"
-                error={"this field is required"}
+                error={""}
                 />
-                <InputField label="Enter Last Name"
+                {console.log(this.state)}
+                <InputField
+                value={this.state.student.lastname}
+                onChange={({target : {value,name}}) => this.setState({
+                    student : {...this.state.student,[name] : value}
+                })}
+                 varitent="shink" label="Enter Last Name"
                 name="lastname"/>
+                <InputField
+                value={this.state.student.email}
+                onChange={({target : {value,name}}) => this.setState({
+                    student : {...this.state.student,[name] : value}
+                })}
+                 varitent="shink" label="Enter your email"
+                name="email"/>
 
             </div>
         </div>
